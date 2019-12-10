@@ -7,11 +7,11 @@
   <artifactId>jsoup</artifactId>
   <version>1.12.2-SNAPSHOT</version>
   <description>jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods. jsoup implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers do.</description>
-  <url>https://jsoup.org/</url>
+  <url>https://github.com/CAUSW-DP2019-TEAM18/jsoup</url>
   <inceptionYear>2009</inceptionYear>
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/jhy/jsoup/issues</url>
+    <url>https://github.com/CAUSW-DP2019-TEAM18/jsoup/issues</url>
   </issueManagement>
   <licenses>
     <license>
@@ -21,14 +21,14 @@
     </license>
   </licenses>
   <scm>
-    <url>https://github.com/jhy/jsoup</url>
-    <connection>scm:git:https://github.com/jhy/jsoup.git</connection>
-    <!-- <developerConnection>scm:git:git@github.com:jhy/jsoup.git</developerConnection> -->
+    <url>https://github.com/CAUSW-DP2019-TEAM18/jsoup</url>
+    <connection>scm:git:https://github.com/CAUSW-DP2019-TEAM18/jsoup.git</connection>
+    <!-- <developerConnection>scm:git:git@github.com:CAUSW-DP2019-TEAM18/jsoup.git</developerConnection> -->
     <tag>HEAD</tag>
   </scm>
   <organization>
-    <name>Jonathan Hedley</name>
-    <url>https://jhy.io/</url>
+    <name>CAUSW-DP2019-TEAM18</name>
+    <url>https://github.com/CAUSW-DP2019-TEAM18</url>
   </organization>
 
   <build>
@@ -296,13 +296,22 @@
 
   <developers>
     <developer>
-      <id>jhy</id>
-      <name>Jonathan Hedley</name>
-      <email>jonathan@hedley.net</email>
+      <id>yinshiheng</id>
+      <name>Yin Shiheng</name>
+      <email>yinshiheng0085@cau.ac.kr</email>
       <roles>
         <role>Lead Developer</role>
       </roles>
-      <timezone>+11</timezone>
+      <timezone>+9</timezone>
+    </developer>
+    <developer>
+      <id>jincreator</id>
+      <name>Jinkyu Yi</name>
+      <email>jincreator@cau.ac.kr</email>
+      <roles>
+        <role>Lead Developer</role>
+      </roles>
+      <timezone>+9</timezone>
     </developer>
   </developers>
 
