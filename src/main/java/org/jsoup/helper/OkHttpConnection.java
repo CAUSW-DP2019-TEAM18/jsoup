@@ -1,5 +1,7 @@
 package org.jsoup.helper;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import org.jsoup.Connection;
 import org.jsoup.HttpStatusException;
 import org.jsoup.UncheckedIOException;
@@ -263,9 +265,17 @@ public class OkHttpConnection implements Connection {
     }
 
     public Document get() throws IOException {
-        req.method(Method.GET);
-        execute();
-        return res.parse();
+        OkHttpClient client = new OkHttpClient();
+        okhttp3.Request request = new okhttp3.Request.Builder()
+                .url(req.url())
+                .build();
+        try (okhttp3.Response response = client.newCall(request).execute()) {
+            return DataUtil.parseInputStream(
+                    response.body().byteStream(),
+                    DataUtil.defaultCharset,
+                    req.url().toExternalForm(),
+                    req.parser());
+        }
     }
 
     public Document post() throws IOException {

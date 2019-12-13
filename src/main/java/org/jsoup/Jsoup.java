@@ -1,5 +1,6 @@
 package org.jsoup;
 
+import org.jsoup.helper.OkHttpConnection;
 import org.jsoup.nodes.Document;
 import org.jsoup.parser.Parser;
 import org.jsoup.safety.Cleaner;
@@ -70,7 +71,7 @@ public class Jsoup {
      * @return the connection. You can add data, cookies, and headers; set the user-agent, referrer, method; and then execute.
      */
     public static Connection connect(String url) {
-        return HttpConnection.connect(url);
+        return OkHttpConnection.connect(url);
     }
 
     /**
@@ -178,7 +179,7 @@ public class Jsoup {
      @see #connect(String)
      */
     public static Document parse(URL url, int timeoutMillis) throws IOException {
-        Connection con = HttpConnection.connect(url);
+        Connection con = OkHttpConnection.connect(url);
         con.timeout(timeoutMillis);
         return con.get();
     }
